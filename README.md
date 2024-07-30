@@ -1,3 +1,2 @@
 # Auto_Num
-This AI recognizes license plate numbers
-unfortunately I can't upload dataset :/
+This AI recognizes license plate numbers. Unfortunately I can't upload dataset :/
