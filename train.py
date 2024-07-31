@@ -6,8 +6,8 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Input
 
-train_dataset_path = r'E:\Cods\CatsDogs\dataset\train'
-test_dataset_path = r'E:\Cods\CatsDogs\dataset\test'
+train_dataset_path = 'path\train'
+test_dataset_path = 'path\test'
 train_datagen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
 test_datagen = ImageDataGenerator(rescale=1./255)
 
@@ -79,6 +79,6 @@ def predict_license_plate(image_path, model):
 
 if __name__ == "__main__":
     model = tf.keras.models.load_model('license_plate_detector.h5')
-    test_image_path = r'E:\Cods\CatsDogs\dataset\test\license_plate\test_image.png'
+    test_image_path = 'path\test\license_plate\test_image.png'
     is_license_plate = predict_license_plate(test_image_path, model)
     print(f"Номерной знак {'найден' if is_license_plate else 'не найден'}")
